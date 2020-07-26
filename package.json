@@ -1,0 +1,19 @@
+{
+  "name": "webtube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube with vanilia js and nodejs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluepaun/webtube.git"
+  },
+  "author": "bluepaun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluepaun/webtube/issues"
+  },
+  "homepage": "https://github.com/bluepaun/webtube#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
