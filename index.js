@@ -1,8 +1,12 @@
 import express from "express";
+import morgan from "morgan";
+import helmet from "helmet";
+import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
+
 const app = express();
 
 const PORT = 4000;
-
 const PORTHTTP = 80;
 
 const handleListening = () => console.log(`Listening ion : http://localhost:${PORT}`);
@@ -13,15 +17,17 @@ const handleHome = (req, res) => res.send(`Hello from home hehe`);
 
 const handleProfile = (req, res) => res.send(`you are on my profile`);
 
-const betweenHome = (req, res, next) =>{
-    console.log(`between`);
-    next();
-}
+//middleware
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(helmet());
+app.use(morgan("dev"));
 
-//this function is working sequencely 순차적으로 시작
-app.use(betweenHome);
 
-//app.get("/", betweenHome .....,handleHome);
+app.use(middleware);
+
+//route
 app.get("/",handleHome);
 
 app.get("/profile", handleProfile);
