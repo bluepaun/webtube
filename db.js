@@ -4,7 +4,7 @@ export const videos = [
         title: 'Video awesome',
         description: "this is wtf",
         views:445,
-        videoFile:"mov_bbb.ogg",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id : 1111,
             name : "cjw",
@@ -16,7 +16,7 @@ export const videos = [
         title: 'Video aaaa',
         description: "this is wtf",
         views:445,
-        videoFile:"mov_bbb.ogg",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id : 1111,
             name : "cjw",
@@ -28,7 +28,7 @@ export const videos = [
         title: 'Video ffff',
         description: "this is wtf",
         views:445,
-        videoFile:"mov_bbb.ogg",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id : 1111,
             name : "cjw",
@@ -40,7 +40,7 @@ export const videos = [
         title: 'Video ffaaaaff',
         description: "this is wtf",
         views:445,
-        videoFile:"mov_bbb.ogg",
+        videoFile:"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id : 1111,
             name : "cjw",
