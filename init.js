@@ -1,8 +1,10 @@
 import "./db";
 import app from "./app";
+import dotenv from "dotenv";
+dotenv.config();
 
 console.log("init.js");
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const PORT_HTTP = 80;
 
 const handleListening = () =>
