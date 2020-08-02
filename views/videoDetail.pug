@@ -1,4 +1,11 @@
 extends layouts/main.pug
+include mixins/videoBlock
 
 block content
-    p Home
+    .video__player
+        video(src=`/${video.fileUrl}`, controls=true)
+    .video__info
+        a(href=routes.editVideo(video.id)) Edit video
+        h5.video__title=video.title
+        span.video__views=video.view
+        p.video__description=video.description
