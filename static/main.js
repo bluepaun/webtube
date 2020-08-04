@@ -81,14 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
+/***/ "./assets/js/main.js":
+/*!***************************!*\
+  !*** ./assets/js/main.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ \"./assets/scss/styles.scss\");\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+
+/***/ }),
+
+/***/ "./assets/scss/styles.scss":
+/*!*********************************!*\
+  !*** ./assets/scss/styles.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\n  \n\n//# sourceURL=webpack:///./assets/scss/styles.scss?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
