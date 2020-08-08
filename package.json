@@ -31,7 +31,7 @@
         "webpack-split-by-path": "^2.0.0"
     },
     "scripts": {
-        "dev:server": "nodemon --exec babel-node init.js --delay 2",
+        "dev:server": "nodemon --exec babel-node init.js",
         "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
         "build:assets": "cross-env WEBPACK_ENV=production webpack"
     },
@@ -41,6 +41,13 @@
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-prettier": "^3.1.4",
         "nodemon": "^2.0.4",
-        "prettier": "^2.0.5"
+        "prettier": "2.0.5"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "statics/*",
+            "assets/*"
+        ],
+        "delay": "2000"
     }
 }
