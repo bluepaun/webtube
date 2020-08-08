@@ -157,3 +157,5 @@ About
 package-lock.json
 uploads
 static
+static/main.js
+static/styles.css
