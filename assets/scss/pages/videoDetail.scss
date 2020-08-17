@@ -26,6 +26,12 @@
         button {
             background-color: $lightGreen;
         }
+        .video__author {
+            a {
+                color: #3498db;
+                margin-left: 5px;
+            }
+        }
     }
     .video__description {
         width: 100%;

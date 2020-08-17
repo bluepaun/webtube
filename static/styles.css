@@ -538,6 +538,10 @@ textarea:focus {
 .video-container .video__info button {
   background-color: #89c9b8;
 }
+.video-container .video__info .video__author a {
+  color: #3498db;
+  margin-left: 5px;
+}
 .video-container .video__description {
   width: 100%;
   padding-left: 20px;
