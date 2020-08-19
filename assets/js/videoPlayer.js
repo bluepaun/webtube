@@ -85,7 +85,7 @@ function handleDrag(event) {
         volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
     } else if (value >= 0.2) {
         volumeBtn.innerHTML = '<i class="fas fa-volume-down"></i>';
-    } eles {
+    } else {
         volumeBtn.innerHTML = '<i class="fas fa-volume-off"></i>';
     }
 }
