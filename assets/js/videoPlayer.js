@@ -3,7 +3,26 @@ const videoPlayer = document.querySelector("#jsVideoPlayer video");
 const playBtn = document.getElementById("jsPlayButton");
 const volumeBtn = document.getElementById("jsVolumeButton");
 const fullScrnBtn = document.getElementById("jsFullScreen");
+const currentTime = document.getElementById("currentTime");
+const totalTime = document.getElementById("totalTime");
 
+const formatDate = (seconds) => {
+    const secondNumber = parseInt(seconds, 10);
+    let hours = Math.floor(secondNumber / 3600);
+    let minutes = Math.floor((secondNumber - hours * 3600) / 60);
+    let totalSeconds = secondNumber - hours * 3600 - minutes * 60;
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    if (totalSeconds < 10) {
+        totalSeconds = `0${totalSeconds}`;
+    }
+
+    return `${hours}:${minutes}:${totalSeconds}`;
+};
 function handleVolumeClick() {
     if (videoPlayer.muted) {
         videoPlayer.muted = false;
@@ -38,10 +57,28 @@ function goFullScreen() {
     fullScrnBtn.addEventListener("click", exitFullScreen);
 }
 
+function setTotalTime() {
+    const totalTimeString = formatDate(videoPlayer.duration);
+    totalTime.innerHTML = totalTimeString;
+    setInterval(getCurrentTime, 1000);
+}
+
+function getCurrentTime() {
+    const currentTimeString = formatDate(videoPlayer.currentTime);
+    currentTime.innerHTML = currentTimeString;
+}
+
+function handleEnded() {
+    videoPlayer.currentTime = 0;
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+}
+
 function init() {
     playBtn.addEventListener("click", handlePlayClick);
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullScrnBtn.addEventListener("click", goFullScreen);
+    videoPlayer.addEventListener("loadedmetadata", setTotalTime);
+    videoPlayer.addEventListener("ended", handleEnded);
 }
 
 if (videoContainer) {
