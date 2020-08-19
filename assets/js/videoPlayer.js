@@ -58,13 +58,13 @@ function goFullScreen() {
 }
 
 function setTotalTime() {
-    const totalTimeString = formatDate(videoPlayer.duration);
+    const totalTimeString = formatDate(Math.floor(videoPlayer.duration));
     totalTime.innerHTML = totalTimeString;
     setInterval(getCurrentTime, 1000);
 }
 
 function getCurrentTime() {
-    const currentTimeString = formatDate(videoPlayer.currentTime);
+    const currentTimeString = formatDate(Math.floor(videoPlayer.currentTime));
     currentTime.innerHTML = currentTimeString;
 }
 
