@@ -644,6 +644,31 @@ textarea:focus {
 .video-container .video__comments {
   margin: 30px 0px;
 }
+.video-container .video__comments .video__comment-number {
+  margin-bottom: 10px;
+}
+.video-container .video__comments .video__comment-number span:not(:last-child) {
+  margin-right: 3px;
+}
+.video-container .video__comments .add__comment {
+  margin-bottom: 10px;
+}
+.video-container .video__comments .video__comments-list {
+  width: 100%;
+}
+.video-container .video__comments .video__comments-list li {
+  background-color: #d9adad;
+  padding: 10px 10px;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+          border-bottom-left-radius: 0px;
+}
+.video-container .video__comments .video__comments-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .home-videos {
   display: grid;
