@@ -665,9 +665,15 @@ textarea:focus {
   -webkit-border-bottom-left-radius: 0px;
      -moz-border-radius-bottomleft: 0px;
           border-bottom-left-radius: 0px;
+  position: relative;
 }
 .video-container .video__comments .video__comments-list li:not(:last-child) {
   margin-bottom: 10px;
+}
+.video-container .video__comments .video__comments-list li span:not(:first-child) {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
 
 .home-videos {
