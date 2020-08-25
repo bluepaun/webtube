@@ -109,7 +109,7 @@ function init() {
     playBtn.addEventListener("click", handlePlayClick);
     volumeBtn.addEventListener("click", handleVolumeClick);
     fullScrnBtn.addEventListener("click", goFullScreen);
-    videoPlayer.addEventListener("loaded", setTotalTime);
+    videoPlayer.addEventListener("loadeddata", setTotalTime);
     videoPlayer.addEventListener("ended", handleEnded);
     volumeRange.addEventListener("input", handleDrag);
 }
