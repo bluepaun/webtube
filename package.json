@@ -51,7 +51,8 @@
         "copyAll": "ncp src/static build/static && ncp src/views build/views",
         "build": "npm run build:server && npm run build:assets && npm run copyAll",
         "prebuild": "rd /s \"build\"",
-        "start": "node build/init.js"
+        "start": "node build/init.js",
+        "prestart": "npm run build"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.10.4",
