@@ -8,6 +8,11 @@ import {
 } from "./controllers/userController";
 import routes from "./routes";
 
+console.log(
+    `${process.env.PRODUCTION ? process.env.PROD_URL : process.env.LOCAL_URL}${
+        routes.gitHubCallback
+    }`
+);
 passport.use(User.createStrategy());
 passport.use(
     new GithubStrategy(
