@@ -50,7 +50,7 @@
         "build:server": "babel src --out-dir build --ignore 'src/static','src/assets','src/webpack.config.js'",
         "copyAll": "ncp src/static build/static && ncp src/views build/views",
         "build": "npm run build:server && npm run build:assets && npm run copyAll",
-        "prebuild": "rd /s \"build\"",
+        "prebuild": "rm -rf build",
         "start": "node build/init.js",
         "prestart": "npm run build"
     },
